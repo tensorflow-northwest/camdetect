@@ -6,7 +6,7 @@ Tested on Ubuntu 16.04 LTS
 Install steps:
 _____________
 
-
+```
 apt-get update
 apt-get install git -y
 
@@ -30,5 +30,5 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 git clone https://github.com/tensorflow-northwest/camdetect.git
 cd camdetect/
 python3 camdetect.py
-
+```
 
