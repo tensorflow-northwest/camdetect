@@ -16,7 +16,7 @@ chmod +x camdetect.sh
 ```
 
 
-## Install steps:
+## Compile and Install from scratch on Ubuntu 16.04:
 ############################################################
 
 
