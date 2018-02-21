@@ -6,6 +6,16 @@ Tested on Ubuntu 16.04 LTS
 
 Author: @alkari
 
+TL;DR:
+
+```
+git clone https://github.com/tensorflow-northwest/camdetect.git
+cd camdetect
+chmod +x camdetect.sh
+./camdetect.sh
+```
+
+
 ## Install steps:
 ############################################################
 
