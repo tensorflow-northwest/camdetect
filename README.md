@@ -2,9 +2,9 @@
 
 ### Object Detection using a webcam with OpenCV and TensorFlow
 
-### Tested on Ubuntu 16.04 LTS
+Tested on Ubuntu 16.04 LTS
 
-### Author: @alkari
+Author: @alkari
 
 ## Install steps:
 ############################################################
@@ -14,13 +14,13 @@
 apt-get update
 apt-get install git -y
 
-# Install OpenCV 3.3
+### Install OpenCV 3.3
 git clone https://github.com/alkari/install_cv2.git
 cd install_cv2
 chmod +x ubuntu_install_cv2.sh
 bash ubuntu_install_cv2.sh
 
-# Install tensorflow & other packages
+### Install tensorflow & other packages
 apt-get update
 apt-get install git -y
 apt-get install protobuf-compiler python-pil python-lxml python3-pip -y
@@ -29,7 +29,6 @@ cd /usr/local/lib/python3.5/dist-packages/tensorflow
 git clone https://github.com/tensorflow/models.git
 cd models/research/
 protoc object_detection/protos/*.proto --python_out=.
-### From tensorflow/models/research/
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 git clone https://github.com/tensorflow-northwest/camdetect.git
 apt-get clean
@@ -42,7 +41,7 @@ python3 camdetect.py
 
 ## To run pre-compiled in a Docker container:
 
-### First, ensure x permissions allow connection on host system
+### First, ensure x permissions allow connections on host system
 ```
 xhost +
 ```
