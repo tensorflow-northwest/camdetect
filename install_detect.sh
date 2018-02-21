@@ -57,11 +57,9 @@ rm -rf opencv opencv_contrib
 
 echo "OpenCV installed successfully"
 
-# Install others
 
 apt-get -y update
 
-apt-get update
 apt-get install protobuf-compiler python-pil python-lxml python3-pip git -y
 pip3 install --upgrade pillow lxml jupyter matplotlib tensorflow
 cd /usr/local/lib/python3.5/dist-packages/tensorflow
@@ -71,16 +69,11 @@ protoc object_detection/protos/*.proto --python_out=.
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 git clone https://github.com/tensorflow-northwest/camdetect.git
 
-
-
 # Cleanup
-
 apt-get -y remove build-essential cmake git pkg-config libatlas-base-dev \
     gfortran libjasper-dev libgtk2.0-dev libavcodec-dev libavformat-dev \
     libswscale-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libv4l-dev
-
 apt-get clean
-
 rm -rf /var/lib/apt/lists/*
 
 echo "Install complete. run: python3 camdetect.py"
