@@ -6,7 +6,7 @@ Tested on Ubuntu 16.04 LTS
 
 Author: @alkari
 
-## TL;DR:
+## TL;DR -
 
 ```
 git clone https://github.com/tensorflow-northwest/camdetect.git
@@ -16,7 +16,31 @@ chmod +x camdetect.sh
 ```
 
 
-## Compile and Install from scratch on Ubuntu 16.04:
+
+## To Run pre-compiled in a Docker container:
+############################################################
+
+### First, ensure x permissions allow connections on host system
+```
+xhost +
+```
+
+### To run cam object detection
+```
+docker run -it --rm  --privileged --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro alkari/camdetect python3 camdetect/camdetect.py
+```
+
+### To login to the container
+```
+docker run -it --rm  --privileged --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro -p 8888:8888 alkari/camdetect /bin/bash
+```
+
+### To view files in Jupyter notebook
+```
+docker run -it --rm -p 127.0.0.1:8888:8888 alkari/camdetect sh -c "jupyter notebook --ip=* --allow-root --no-browser"
+```
+
+## To Compile and Install from scratch on Ubuntu 16.04:
 ############################################################
 
 
@@ -46,27 +70,4 @@ rm -rf /var/lib/apt/lists/*
 cd camdetect/
 python3 camdetect.py
 ```
-############################################################
 
-
-## To run pre-compiled in a Docker container:
-
-### First, ensure x permissions allow connections on host system
-```
-xhost +
-```
-
-### To run cam object detection
-```
-docker run -it --rm  --privileged --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro alkari/camdetect python3 camdetect/camdetect.py
-```
-
-### To login to the container
-```
-docker run -it --rm  --privileged --env DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro -p 8888:8888 alkari/camdetect /bin/bash
-```
-
-### To view files in Jupyter notebook
-```
-docker run -it --rm -p 127.0.0.1:8888:8888 alkari/camdetect sh -c "jupyter notebook --ip=* --allow-root --no-browser"
-```
