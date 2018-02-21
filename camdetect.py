@@ -21,8 +21,6 @@ sys.path.append(PACKAGES_PATH + '/tensorflow/models/research')
 sys.path.append(PACKAGES_PATH + '/tensorflow/models/research/slim')
 sys.path.append(PACKAGES_PATH + '/tensorflow/models/research/object_detection')
 
-
-
 # Import required libraries
 import numpy as np
 import six.moves.urllib as urllib
@@ -30,10 +28,6 @@ import tarfile
 import tensorflow as tf
 import zipfile
 import cv2
-
-from collections import defaultdict
-from io import StringIO
-from PIL import Image
 
 # Import Object Detection support functions
 from utils import label_map_util
