@@ -6,7 +6,7 @@ Tested on Ubuntu 16.04 LTS
 
 Author: @alkari
 
-TL;DR:
+## TL;DR:
 
 ```
 git clone https://github.com/tensorflow-northwest/camdetect.git
