@@ -1,12 +1,12 @@
 # camdetect
 
-# Object Detection using a webcam with OpenCV and TensorFlow
+### Object Detection using a webcam with OpenCV and TensorFlow
 
-# Tested on Ubuntu 16.04 LTS
+### Tested on Ubuntu 16.04 LTS
 
-# Author: @alkari
+### Author: @alkari
 
-# Install steps:
+## Install steps:
 ############################################################
 
 
