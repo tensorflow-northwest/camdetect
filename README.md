@@ -8,7 +8,7 @@ Author: @alkari
 
 ## TL;DR - Run camdetect:
 
-The fastest way to run is using Docker. Once installed, camdetect.sh script is provided to quickly run a container and launch the application.
+The fastest way to run is using Docker. Once installed, camdetect.sh script is provided to quickly run a container and launch the application. Video capture will be stored in your /tmp folder.
 
 ```
 git clone https://github.com/tensorflow-northwest/camdetect.git
